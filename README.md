@@ -12,10 +12,15 @@ This repository contains all tasks for my blockchain internship, implemented in 
 - **Files**: [Task2/MultiSend.sol](Task2/MultiSend.sol)
 - **How to Test**: Deploy in Remix, send Ether via `distribute` function, and check balances.
 
-## Future Tasks
-- Add details here as more tasks are completed.
+## Task 3: Personal Portfolio (Crypto Locking) Smart Contract
+- **Description**: Users deposit Ether with a lock-in time; withdrawals only after the lock time has passed using block.timestamp and mappings for storage.
+- **Files**: [Task3/CryptoLocking.sol](Task3/CryptoLocking.sol)
+- **How to Test**: Deposit Ether with a lock time, try early withdraw (fails), wait for lock to expire, then withdraw successfully.
 
 ## General Instructions
-- All contracts are compiled with Solidity ^0.8.0.
+- All contracts are compiled with Solidity ^0.8.31.
 - Test on Remix IDE (remix.ethereum.org) using Remix VM.
-- Deployed addresses (if any): [Add here]
+- Deployed addresses (if any):
+- SimpleStorage :0xaE036c65C649172b43ef7156b009c6221B596B8b
+- Multiplestorage :0xcD6a42782d230D7c13A74ddec5dD140e55499Df9
+- Personal portfolio :0xb27A31f1b0AF2946B7F582768f03239b1eC07c2c
