@@ -1,26 +1,34 @@
-# Blockchain Internship Tasks
+# CodeAlpha Blockchain Internship Tasks
 
-This repository contains all tasks for my blockchain internship, implemented in Solidity.
+## About
+This repository contains tasks completed during my blockchain internship, implemented using Solidity smart contracts.
 
-## Task 1: Simple Storage Smart Contract
-- **Description**: A contract with an integer variable, increment/decrement functions, and public readability.
-- **Files**: [Task1/SimpleStorage.sol](Task1/SimpleStorage.sol)
-- **How to Test**: Compile in Remix IDE, deploy, and test increment/decrement.
+## Task 1 — Simple Storage Smart Contract
+Description: Implemented a Solidity smart contract that stores an integer value and provides functions to increment and decrement the value securely.  
+Tech: Solidity, Remix IDE
 
-## Task 2: Multi-Send Smart Contract
-- **Description**: A payable contract that distributes Ether equally to an array of addresses using a loop.
-- **Files**: [Task2/MultiSend.sol](Task2/MultiSend.sol)
-- **How to Test**: Deploy in Remix, send Ether via `distribute` function, and check balances.
+## Task 2 — MultiSend Smart Contract
+Description: Developed a smart contract that distributes Ether evenly to multiple wallet addresses in a single transaction.  
+Tech: Solidity, Remix IDE
 
-## Task 3: Personal Portfolio (Crypto Locking) Smart Contract
-- **Description**: Users deposit Ether with a lock-in time; withdrawals only after the lock time has passed using block.timestamp and mappings for storage.
-- **Files**: [Task3/CryptoLocking.sol](Task3/CryptoLocking.sol)
-- **How to Test**: Deposit Ether with a lock time, try early withdraw (fails), wait for lock to expire, then withdraw successfully.
+## Task 3 — Crypto Locking Smart Contract
+Description: Built a smart contract that allows users to deposit Ether with a specified lock time and withdraw funds only after the lock period expires.  
+Tech: Solidity, Remix IDE
 
-## General Instructions
-- All contracts are compiled with Solidity ^0.8.31.
-- Test on Remix IDE (remix.ethereum.org) using Remix VM.
-- Deployed addresses (if any):
-- SimpleStorage :0xaE036c65C649172b43ef7156b009c6221B596B8b
-- Multiplestorage :0xcD6a42782d230D7c13A74ddec5dD140e55499Df9
-- Personal portfolio :0xb27A31f1b0AF2946B7F582768f03239b1eC07c2c
+## How to Test
+1. Open Remix IDE
+2. Compile the smart contract files
+3. Deploy the contracts
+4. Interact with the contract functions using Remix
+
+## Tech Stack
+- Solidity
+- Remix IDE
+
+## Key Learnings
+- Smart contract development and deployment
+- Ethereum blockchain fundamentals
+- Solidity syntax and contract logic
+- Hands-on testing using Remix IDE
+
+
