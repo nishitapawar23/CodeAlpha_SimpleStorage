@@ -1,0 +1,45 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract CryptoLocking {
+    // Mappings to store user deposits and unlock times
+    mapping(address => uint256) public balances;
+    mapping(address => uint256) public unlockTimes;
+
+    // Event for logging deposits
+    event Deposited(address indexed user, uint256 amount, uint256 unlockTime);
+
+    // Function to deposit Ether with a lock time
+    function deposit(uint256 _lockTime) external payable {
+        require(msg.value > 0, "Deposit amount must be greater than 0");
+        require(_lockTime > 0, "Lock time must be greater than 0");
+
+        uint256 unlockTime = block.timestamp + _lockTime;
+        balances[msg.sender] += msg.value;
+        unlockTimes[msg.sender] = unlockTime;
+
+        emit Deposited(msg.sender, msg.value, unlockTime);
+    }
+
+    // Function to withdraw Ether after lock time
+    function withdraw() external {
+        require(balances[msg.sender] > 0, "No balance to withdraw");
+        require(block.timestamp >= unlockTimes[msg.sender], "Funds are still locked");
+
+        uint256 amount = balances[msg.sender];
+        balances[msg.sender] = 0;
+        unlockTimes[msg.sender] = 0;
+
+        // Transfer Ether
+        (bool success, ) = msg.sender.call{value: amount}("");
+        require(success, "Transfer failed");
+    }
+
+    // Optional: View function to check remaining lock time
+    function getRemainingLockTime(address _user) external view returns (uint256) {
+        if (block.timestamp >= unlockTimes[_user]) {
+            return 0;
+        }
+        return unlockTimes[_user] - block.timestamp;
+    }
+}
