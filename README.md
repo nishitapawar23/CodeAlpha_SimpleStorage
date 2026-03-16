@@ -1,34 +1,20 @@
-# CodeAlpha Blockchain Internship Tasks
+# Blockchain Internship - CodeAlpha
 
-## About
-This repository contains tasks completed during my blockchain internship, implemented using Solidity smart contracts.
+This repository contains the tasks completed during my Blockchain Development Internship.
 
-## Task 1 — Simple Storage Smart Contract
-Description: Implemented a Solidity smart contract that stores an integer value and provides functions to increment and decrement the value securely.  
-Tech: Solidity, Remix IDE
+## Internship Details
+Organization: CodeAlpha  
+Domain: Blockchain Development  
 
-## Task 2 — MultiSend Smart Contract
-Description: Developed a smart contract that distributes Ether evenly to multiple wallet addresses in a single transaction.  
-Tech: Solidity, Remix IDE
+## Tasks Completed
+- Task 1: Smart Contract Development
+- Task 2: Blockchain Application Basics
+- Task 3: Decentralized Application Concepts
 
-## Task 3 — Crypto Locking Smart Contract
-Description: Built a smart contract that allows users to deposit Ether with a specified lock time and withdraw funds only after the lock period expires.  
-Tech: Solidity, Remix IDE
-
-## How to Test
-1. Open Remix IDE
-2. Compile the smart contract files
-3. Deploy the contracts
-4. Interact with the contract functions using Remix
-
-## Tech Stack
+## Technologies Used
 - Solidity
-- Remix IDE
+- Ethereum
+- Blockchain Basics
 
-## Key Learnings
-- Smart contract development and deployment
-- Ethereum blockchain fundamentals
-- Solidity syntax and contract logic
-- Hands-on testing using Remix IDE
-
-
+## Author
+Nishita Pawar
